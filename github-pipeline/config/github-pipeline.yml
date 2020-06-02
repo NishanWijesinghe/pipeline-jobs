@@ -6,7 +6,7 @@
       script-path: "Jenkinsfile"
       scm:
         - git:
-            url: "https://github.com/alfredodeza/static.git"
+            url: "https://github.com/NishanWijesinghe/devops-aws-demo.git"
             clean: true
 
     triggers:

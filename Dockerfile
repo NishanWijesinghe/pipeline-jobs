@@ -1,10 +1,11 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:latest
 
 
 #Ref: https://github.com/jenkinsci/docker/blob/master/README.md
 #jenkins/jenkins:lts defaults to /var/jenkins_home
 # set home directory for jenkins
 ENV JENKINS_HOME /var/jenkins_home
+ENV WORK_DIR /usr/local/bin
 
 USER root
 
@@ -41,6 +42,14 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN mkdir -p /var/jenkins_home/.aws && chown jenkins /var/jenkins_home/.aws
 
 # auto job builder @ /usr/local/bin/jenkins-jobs
-WORKDIR /usr/local/bin/
-COPY jenkins-jobs/ .
+WORKDIR $WORK_DIR/
+COPY --chown=jenkins jenkins-jobs/ .
+COPY --chown=jenkins github-pipeline/ $WORK_DIR/github-pipeline
+COPY --chown=jenkins jenkins-job-builder/ $WORK_DIR/jenkins-job-builder
+
+#Manual: create new API token and copy to clip
+#vim jenkins_jobs.ini
+#jenkins-jobs --conf jenkins_jobs.ini test github-pipeline/config/github-pipeline.yml
+#jenkins-jobs --conf jenkins_jobs.ini update github-pipeline/config/github-pipeline.yml
+
 

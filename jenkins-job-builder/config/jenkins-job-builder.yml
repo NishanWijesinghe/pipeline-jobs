@@ -10,7 +10,7 @@
     retry-count: 3
     properties:
       - github:
-          url: https://github.com/alfredodeza/pipeline-jobs
+          url: https://github.com/NishanWijesinghe/pipeline-jobs
 
     triggers:
       - pollscm:
@@ -28,7 +28,7 @@
 
     scm:
       - git:
-          url: https://github.com/alfredodeza/pipeline-jobs
+          url: https://github.com/NishanWijesinghe/pipeline-jobs
           branches:
             - master
           browser: auto
