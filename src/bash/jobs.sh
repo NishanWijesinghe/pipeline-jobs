@@ -1,6 +1,6 @@
+#!/usr/bin/env bash
 
 base_dir=/usr/local/bin
-
 source ${base_dir}/jenkins-job-builder/api-info
 sed -i -e "s/password=/password=${token}/g" ${base_dir}/jenkins-job-builder/jenkins_jobs.ini
 echo "####Testing job generation#######"
