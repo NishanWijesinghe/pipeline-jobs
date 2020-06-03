@@ -17,3 +17,7 @@ make jobs
 - Jenkins API token created in groovy.
 - Auto generate Jenkins pipelines & projects via jenkins-job-builder
 
+## Nishan's rule
+
+Dev/Sec/Git-Ops engineers must not touch a GUI. Achieve 100% IaaC & configuration-as-code.
+
