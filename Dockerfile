@@ -40,11 +40,11 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 RUN mkdir -p /var/jenkins_home/.aws && chown jenkins /var/jenkins_home/.aws
 
-# auto job builder @ /usr/local/bin/jenkins-jobs
-WORKDIR $WORK_DIR/
-COPY --chown=jenkins jenkins-jobs/ .
 COPY --chown=jenkins github-pipeline/ $WORK_DIR/github-pipeline
 COPY --chown=jenkins jenkins-job-builder/ $WORK_DIR/jenkins-job-builder
+
+# auto job builder @ /usr/local/bin/jenkins-jobs
+WORKDIR $WORK_DIR/
 
 
 
