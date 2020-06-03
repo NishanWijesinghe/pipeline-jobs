@@ -1,4 +1,3 @@
-#!/bin/bash
 
 base_dir=/usr/local/bin
 
