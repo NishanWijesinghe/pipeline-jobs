@@ -1,6 +1,6 @@
 # Jenkins configuration-as-code
 
-Project workflow is (1) launch Jenkins container, (2) await Jenkins launch, (3) generate all Jenkins pipelines. 
+Project workflow is (1) run Jenkins container, (2) grep/await Jenkins launch completion, (3) generate all Jenkins pipelines. 
 
 Key workflow from [Makefile](Makefile):
 
@@ -10,9 +10,9 @@ make await
 make jobs
 ```
 
-## Nishan's practice
+## Best practice
 
-Dev/Sec/Git-Ops engineers do not touch GUIs. Achieve 100% IaaC & configuration-as-code.
+ "Dev/Sec/Git-Ops engineers do not touch GUIs. Achieve 100% IaaC & configuration-as-code." ~ Nishan R. Wijesinghe
 
 ## Detailed design
 
