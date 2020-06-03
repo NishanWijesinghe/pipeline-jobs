@@ -10,7 +10,7 @@ make await
 make jobs
 ```
 
-## Nishan's best practice
+## Nishan's practice
 
 Dev/Sec/Git-Ops engineers do not touch GUIs. Achieve 100% IaaC & configuration-as-code.
 
