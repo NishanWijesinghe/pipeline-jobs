@@ -10,7 +10,7 @@ run: stop_rm
 	docker run -p 80:8080 --name=${PROJECT_NAME} -d --env JAVA_OPTS="-Xmx9830M -Djenkins.install.runSetupWizard=false" --env JENKINS_OPTS="--handlerCountMax=300" ${PROJECT_NAME}:${TAG}
 	docker ps
 
-timer:
+await:
 	echo "Ctrl + C after ${JENKINS_READY} appears on screen"
 	docker logs -f ${PROJECT_NAME} 2>&1 | grep ${JENKINS_READY}
 
