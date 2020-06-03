@@ -12,3 +12,5 @@ start:
 	docker start ${PROJECT_NAME}
 stop_rm:
 	docker stop ${PROJECT_NAME} || true && docker rm ${PROJECT_NAME} || true
+exec_root:
+	docker exec -u 0 -it ${PROJECT_NAME} bash

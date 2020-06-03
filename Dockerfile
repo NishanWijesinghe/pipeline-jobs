@@ -1,6 +1,5 @@
 FROM jenkins/jenkins:latest
 
-
 #Ref: https://github.com/jenkinsci/docker/blob/master/README.md
 #jenkins/jenkins:lts defaults to /var/jenkins_home
 # set home directory for jenkins
@@ -29,7 +28,7 @@ VOLUME /rdf
 VOLUME /tmp
 
 #Runs scripts in lexicographical order on container launch
-COPY src/ /usr/share/jenkins/ref/init.groovy.d
+COPY --chown=jenkins src/init.groovy.d/ /usr/share/jenkins/ref/init.groovy.d
 
 USER jenkins
 
@@ -47,9 +46,6 @@ COPY --chown=jenkins jenkins-jobs/ .
 COPY --chown=jenkins github-pipeline/ $WORK_DIR/github-pipeline
 COPY --chown=jenkins jenkins-job-builder/ $WORK_DIR/jenkins-job-builder
 
-#Manual: create new API token and copy to clip
-#vim jenkins_jobs.ini
-#jenkins-jobs --conf jenkins_jobs.ini test github-pipeline/config/github-pipeline.yml
-#jenkins-jobs --conf jenkins_jobs.ini update github-pipeline/config/github-pipeline.yml
+
 
 
