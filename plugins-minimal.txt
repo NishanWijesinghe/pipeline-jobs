@@ -12,3 +12,4 @@ aws-global-configuration:latest
 docker-commons:latest
 docker-workflow:latest
 email-ext:latest
+workflow-aggregator:latest

@@ -8,10 +8,11 @@ ENV WORK_DIR /usr/local/bin
 
 USER root
 
-RUN apt-get update && apt-get install -y vim
 RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y python-pip
+RUN apt-get install -y vim &&\
+    apt-get install -y python3 &&\
+    apt-get install -y python3-venv &&\
+    apt-get install -y python-pip
 
 RUN pip install awscli &&\
    pip install jenkins-job-builder &&\

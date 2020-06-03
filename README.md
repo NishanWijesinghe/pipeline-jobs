@@ -1,6 +1,6 @@
 # Jenkins configuration-as-code
 
-Project workflow is (1) launch Jenkins container, (2) await Jenkins launch, (3) generate all Jenkins projects and pipelines. 
+Project workflow is (1) launch Jenkins container, (2) await Jenkins launch, (3) generate all Jenkins pipelines. 
 
 ```
 make build_run
@@ -15,7 +15,7 @@ make jobs
 - Jenkins running in a Docker container. 
 - Jenkins admin user created in groovy. 
 - Jenkins API token created in groovy.
-- Auto generate Jenkins pipelines & projects via jenkins-job-builder
+- Auto generate Jenkins pipelines via jenkins-job-builder
 
 ## Nishan's rule
 
