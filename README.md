@@ -14,7 +14,7 @@ make jobs
 
 ## Best practice
 
- "Dev/Sec/Git-Ops engineers do not touch GUIs. Achieve 100% IaaC & configuration-as-code." 
+ "SREs + Dev/Sec/Git-Ops engineers do not touch GUIs. Achieve 100% IaaC & configuration-as-code." 
  ~ [Nishan R. Wijesinghe](https://www.linkedin.com/in/nishanwijesinghe/)
 
 ## Detailed design
