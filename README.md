@@ -1,6 +1,6 @@
 # Jenkins automated
 
-The code here implements automation for Jenkins configuration & pipelines. This is a site reliability engineering best practice.
+The code implements automation for Jenkins configuration & creating pipelines. This is a site reliability engineering best practice.
 
 Project workflow is (1) run Jenkins container, (2) grep/await Jenkins launch completion, (3) generate all Jenkins pipelines. 
 
