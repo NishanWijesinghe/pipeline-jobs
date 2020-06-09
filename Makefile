@@ -1,6 +1,7 @@
 PROJECT_NAME=jenkins-master
 TAG=latest
 JENKINS_READY='Jenkins is fully up and running'
+container_base_dir=/usr/local/bin
 
 build:
 	docker build -t ${PROJECT_NAME}:${TAG} .
@@ -26,3 +27,4 @@ exec_root:
 	docker exec -u 0 -it ${PROJECT_NAME} bash
 jobs:
 	docker exec -it ${PROJECT_NAME} bash -c "jenkins-bash/jobs.sh"
+
